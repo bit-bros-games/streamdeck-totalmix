@@ -17,7 +17,7 @@
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "MIDI: Trigger Function",
-      "UUID": "de.shells.totalmix.midinote.action"
+      "UUID": "com.bitbros.tentacle.midinote.action"
     },
     {
       "Icon": "Images/actionIcon",
@@ -36,7 +36,7 @@
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "MIDI: Control Faders and Gains",
-      "UUID": "de.shells.totalmix.midicc.action"
+      "UUID": "com.bitbros.tentacle.midicc.action"
     },
     {
       "Icon": "Images/actionIcon",
@@ -55,7 +55,7 @@
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "OSC: Trigger Global Function",
-      "UUID": "de.shells.totalmix.osctoggle.action"
+      "UUID": "com.bitbros.tentacle.osctoggle.action"
     },
     {
       "Icon": "Images/actionIcon",
@@ -74,7 +74,7 @@
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "OSC: Toogle Channel Function",
-      "UUID": "de.shells.totalmix.osconoff.action"
+      "UUID": "com.bitbros.tentacle.osconoff.action"
     },
     {
       "Icon": "Images/actionIcon",
@@ -93,19 +93,19 @@
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "OSC: Control Channel",
-      "UUID": "de.shells.totalmix.oscchannel.action"
+      "UUID": "com.bitbros.tentacle.oscchannel.action"
     }
   ],
-  "Category": "TotalMix FX Control",
+  "Category": "Tentacle",
   "CategoryIcon": "Images/category/categoryIcon",
   "Disabled": false,
   "Author": "shells",
-  "CodePathWin": "de.shells.totalmix.exe",
+  "CodePathWin": "com.bitbros.tentacle.exe",
   "PropertyInspectorPath": "PropertyInspector/PluginActionPI.html",
-  "Description": "Control TotalMix FX with StreamDeck! Features: (rather complete) OSC and (limited) MIDI implementation. Load snapshots/mixes, toggle mute/solo globally and on individual channels, change channel volume, pan, gain, phase, cue, width, control master out and many other settings. Visit the project Github-site linked below to view a full manual!",
-  "Name": "Control RME TotalMix FX",
+  "Description": "Control OSC over the network... now with 1000% more tentacles!",
+  "Name": "Tentacle",
   "Icon": "Images/pluginIcon",
-  "URL": "https://github.com/shells-dw/streamdeck-totalmix",
+  "URL": "https://github.com/bit-bros-games/streamdeck-totalmix.git",
   "Version": "2.2.1",
   "SDKVersion": 2,
   "Software": {

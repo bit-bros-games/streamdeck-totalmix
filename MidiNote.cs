@@ -19,7 +19,7 @@ namespace MidiDevice
 }
 namespace streamdeck_totalmix
 {
-    [PluginActionId("de.shells.totalmix.midinote.action")]
+    [PluginActionId("com.bitbros.tentacle.midinote.action")]
 
 public class MidiNote : PluginBase
     {

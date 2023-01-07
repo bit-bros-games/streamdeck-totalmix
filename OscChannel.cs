@@ -7,7 +7,7 @@ using SharpOSC;
 
 namespace streamdeck_totalmix
 {
-    [PluginActionId("de.shells.totalmix.oscchannel.action")]
+    [PluginActionId("com.bitbros.tentacle.oscchannel.action")]
     public class OscChannel : PluginBase
     {
         private class PluginSettings
@@ -18,7 +18,7 @@ namespace streamdeck_totalmix
                 {
                     Name = "/1/volume1",
                     SelectedAction = "1",
-                    Port = 7001,
+                    Port = 8000,
                     IP = "127.0.0.1",
                     Bus = "Input",
                     SelectedValue = String.Empty,

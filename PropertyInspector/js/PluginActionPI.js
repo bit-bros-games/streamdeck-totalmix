@@ -24,13 +24,13 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
     var event = new Event('websocketCreate');
     document.dispatchEvent(event);
     loadConfiguration(actionInfo);
-    if (actionInfo.action === "de.shells.totalmix.osctoggle.action") {
+    if (actionInfo.action === "com.bitbros.tentacle.osctoggle.action") {
         Name = actionInfo.payload.settings.Name;
         Port = actionInfo.payload.settings.Port;
         IP = actionInfo.payload.settings.IP;
         SelectedAction = actionInfo.payload.settings.SelectedAction;
         Latch = actionInfo.payload.settings.Latch;
-    } else if (actionInfo.action === "de.shells.totalmix.osconoff.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.osconoff.action") {
         Name = actionInfo.payload.settings.Name;
         Port = actionInfo.payload.settings.Port;
         ListeningPort = actionInfo.payload.settings.ListeningPort;
@@ -40,7 +40,7 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
         SelectedValue = actionInfo.payload.settings.SelectedValue;
         MuteSolo = actionInfo.payload.settings.MuteSolo;
         IncludeOscOnOff = actionInfo.payload.settings.IncludeOscOnOff;
-    } else if (actionInfo.action === "de.shells.totalmix.oscchannel.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.oscchannel.action") {
         Name = actionInfo.payload.settings.Name;
         Port = actionInfo.payload.settings.Port;
         IP = actionInfo.payload.settings.IP;
@@ -48,13 +48,13 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
         Bus = actionInfo.payload.settings.Bus;
         SelectedValue = actionInfo.payload.settings.SelectedValue;
         SelectedFunction = actionInfo.payload.settings.SelectedFunction;
-    } else if (actionInfo.action === "de.shells.totalmix.midinote.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.midinote.action") {
         Channel = actionInfo.payload.settings.Channel;
         SelectedMidiAction = actionInfo.payload.settings.SelectedMidiAction;
         MidiNote = actionInfo.payload.settings.MidiNote;
         SelectedDevice = actionInfo.payload.settings.SelectedDevice;
         Devices = actionInfo.payload.settings.Devices;
-    } else if (actionInfo.action === "de.shells.totalmix.midicc.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.midicc.action") {
         Channel = actionInfo.payload.settings.Channel;
         Control = actionInfo.payload.settings.Control;
         ControlValue = actionInfo.payload.settings.ControlValue;
@@ -131,7 +131,7 @@ function setSettings(value, param) {
     if (param === "Control") { Control = payload.Control }
     if (param === "ControlValue") { ControlValue = payload.ControlValue }
     if (param === "IncludeOscOnOff") { IncludeOscOnOff = payload.IncludeOscOnOff }
-    if (actionInfo.action === "de.shells.totalmix.osctoggle.action") {
+    if (actionInfo.action === "com.bitbros.tentacle.osctoggle.action") {
         settings = {
             IP: IP,
             Port: Port,
@@ -139,7 +139,7 @@ function setSettings(value, param) {
             SelectedAction: SelectedAction,
             Latch: Latch
         }
-    } else if (actionInfo.action === "de.shells.totalmix.osconoff.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.osconoff.action") {
         settings = {
             IP: IP,
             Port: Port,
@@ -151,7 +151,7 @@ function setSettings(value, param) {
             MuteSolo: MuteSolo,
             IncludeOscOnOff: IncludeOscOnOff
         }
-    } else if (actionInfo.action === "de.shells.totalmix.oscchannel.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.oscchannel.action") {
         settings = {
             IP: IP,
             Port: Port,
@@ -161,7 +161,7 @@ function setSettings(value, param) {
             SelectedValue: SelectedValue,
             SelectedFunction: SelectedFunction
         }
-    } else if (actionInfo.action === "de.shells.totalmix.midinote.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.midinote.action") {
         settings = {
             Channel: Channel,
             SelectedMidiAction: SelectedMidiAction,
@@ -169,7 +169,7 @@ function setSettings(value, param) {
             SelectedDevice: SelectedDevice,
             Devices: Devices
         }
-    } else if (actionInfo.action === "de.shells.totalmix.midicc.action") {
+    } else if (actionInfo.action === "com.bitbros.tentacle.midicc.action") {
         settings = {
             Channel: Channel,
             Control: Control,
@@ -263,7 +263,7 @@ function updateUI(pl, settings) {
     // console.log(pl);
     // console.log("updateUI settings:");
     // console.log(settings);
-    if (pl === "de.shells.totalmix.midinote.action") {
+    if (pl === "com.bitbros.tentacle.midinote.action") {
         let x = ['<div class="sdpi-item" id="devices">',
             '<div class="sdpi-item-label">Midi Device</div>',
             '<select class="sdpi-item-value select" id="selDevices" onchange="setSettings(event.target.value, \'SelectedDevice\')">',
@@ -342,7 +342,7 @@ function updateUI(pl, settings) {
         }
         newSelect.value = settings.SelectedDevice;
 
-    } else if (pl === "de.shells.totalmix.midicc.action") {
+    } else if (pl === "com.bitbros.tentacle.midicc.action") {
         let x = ['<div class="sdpi-item" id="devices">',
             '<div class="sdpi-item-label">Midi Device</div>',
             '<select class="sdpi-item-value select" id="selDevices" onchange="setSettings(event.target.value, \'SelectedDevice\')">',
@@ -479,7 +479,7 @@ function updateUI(pl, settings) {
         }
         newSelect.value = settings.SelectedDevice;
 
-    } else if (pl === "de.shells.totalmix.osctoggle.action") {
+    } else if (pl === "com.bitbros.tentacle.osctoggle.action") {
         let x = ['<div class="sdpi-item" id="required_text">',
             '<div class="sdpi-item-label">IP-Address</div>',
             '<input class="sdpi-item-value" id="totalmixIP" value="127.0.0.1" placeholder="192.168.1.150" required pattern="\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}" onchange="setSettings(event.target.value, \'IP\')">',
@@ -573,7 +573,7 @@ function updateUI(pl, settings) {
         } else {
             document.getElementById("chk0").checked = false;
         }
-    } else if (pl === "de.shells.totalmix.osconoff.action") {
+    } else if (pl === "com.bitbros.tentacle.osconoff.action") {
         let x = ['<div class="sdpi-item" id="required_text">',
             '<div class="sdpi-item-label">IP-Address</div>',
             '<input class="sdpi-item-value" id="totalmixIP" value="" placeholder="127.0.0.1" required pattern="\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}" onchange="setSettings(event.target.value, \'IP\')">',
@@ -713,7 +713,7 @@ function updateUI(pl, settings) {
         } else {
             document.getElementById("chk0").checked = false;
         }
-    } else if (pl === "de.shells.totalmix.oscchannel.action") {
+    } else if (pl === "com.bitbros.tentacle.oscchannel.action") {
         let x = ['<div class="sdpi-item" id="required_text">',
             '<div class="sdpi-item-label">IP-Address</div>',
             '<input class="sdpi-item-value" id="totalmixIP" value="" placeholder="127.0.0.1" required pattern="\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}" onchange="setSettings(event.target.value, \'IP\')">',

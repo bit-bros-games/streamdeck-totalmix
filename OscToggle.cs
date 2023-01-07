@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace streamdeck_totalmix
 {
-    [PluginActionId("de.shells.totalmix.osctoggle.action")]
+    [PluginActionId("com.bitbros.tentacle.osctoggle.action")]
     public class OscToggle : PluginBase
     {
         private class PluginSettings

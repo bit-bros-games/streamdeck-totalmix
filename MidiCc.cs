@@ -11,7 +11,7 @@ using RtMidi.Core.Messages;
 
 namespace streamdeck_totalmix
 {
-    [PluginActionId("de.shells.totalmix.midicc.action")]
+    [PluginActionId("com.bitbros.tentacle.midicc.action")]
 
 public class MidiCc : PluginBase
     {

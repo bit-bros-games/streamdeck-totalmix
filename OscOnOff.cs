@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace streamdeck_totalmix
 {
-    [PluginActionId("de.shells.totalmix.osconoff.action")]
+    [PluginActionId("com.bitbros.tentacle.osconoff.action")]
     public class OscOnOff : PluginBase
     {
 

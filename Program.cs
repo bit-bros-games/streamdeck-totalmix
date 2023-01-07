@@ -1,6 +1,6 @@
 ﻿using BarRaider.SdTools;
 
-namespace de.shells.totalmix
+namespace com.bitbros.tentacle
 {
     class Program
     {

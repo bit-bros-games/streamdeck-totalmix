@@ -9,7 +9,7 @@ using SharpOSC;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
-namespace streamdeck_totalmix
+namespace streamdeck_tentacle
 {
     [PluginActionId("com.bitbros.tentacle.osconoff.action")]
     public class OscOnOff : PluginBase

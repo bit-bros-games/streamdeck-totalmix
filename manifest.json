@@ -105,7 +105,7 @@
   "Description": "Control OSC over the network... now with 1000% more tentacles!",
   "Name": "Tentacle",
   "Icon": "Images/pluginIcon",
-  "URL": "https://github.com/bit-bros-games/streamdeck-totalmix.git",
+  "URL": "https://github.com/bit-bros-games/streamdeck-tentacle.git",
   "Version": "2.2.1",
   "SDKVersion": 2,
   "Software": {

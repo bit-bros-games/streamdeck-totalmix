@@ -10,7 +10,7 @@ using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace streamdeck_totalmix
+namespace streamdeck_tentacle
 {
     [PluginActionId("com.bitbros.tentacle.osctoggle.action")]
     public class OscToggle : PluginBase

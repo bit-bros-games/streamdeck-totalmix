@@ -9,7 +9,7 @@ using RtMidi.Core.Devices.Infos;
 using RtMidi.Core.Enums;
 using RtMidi.Core.Messages;
 
-namespace streamdeck_totalmix
+namespace streamdeck_tentacle
 {
     [PluginActionId("com.bitbros.tentacle.midicc.action")]
 

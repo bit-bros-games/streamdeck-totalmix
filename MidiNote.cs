@@ -17,7 +17,7 @@ namespace MidiDevice
         public static IMidiOutputDevice outputDevice;
     }
 }
-namespace streamdeck_totalmix
+namespace streamdeck_tentacle
 {
     [PluginActionId("com.bitbros.tentacle.midinote.action")]
 
